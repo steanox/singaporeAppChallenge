@@ -14,7 +14,16 @@
 		F86CF5361F88B9A800EFA735 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F86CF5351F88B9A800EFA735 /* Assets.xcassets */; };
 		F86CF5391F88B9A800EFA735 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F86CF5371F88B9A800EFA735 /* LaunchScreen.storyboard */; };
 		F86CF54C1F88BEF800EFA735 /* measurements.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F86CF54A1F88BEF800EFA735 /* measurements.storyboard */; };
-		F86CF5501F88C08F00EFA735 /* data.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86CF54F1F88C08F00EFA735 /* data.swift */; };
+		F86CF5501F88C08F00EFA735 /* stuff.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86CF54F1F88C08F00EFA735 /* stuff.swift */; };
+		F86CF5521F88C82A00EFA735 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86CF5511F88C82A00EFA735 /* StartViewController.swift */; };
+		F86CF5541F88CDC100EFA735 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86CF5531F88CDC100EFA735 /* HistoryViewController.swift */; };
+		F86CF5561F88CDD600EFA735 /* HistoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86CF5551F88CDD600EFA735 /* HistoryCell.swift */; };
+		F86CF5581F88D25200EFA735 /* ChooseObjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86CF5571F88D25200EFA735 /* ChooseObjectViewController.swift */; };
+		F86CF55A1F88E42C00EFA735 /* SceneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86CF5591F88E42C00EFA735 /* SceneViewController.swift */; };
+		F86CF55E1F88E5B900EFA735 /* FocusSquare.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86CF55D1F88E5B900EFA735 /* FocusSquare.swift */; };
+		F86CF5611F88E75400EFA735 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86CF5601F88E75400EFA735 /* Utilities.swift */; };
+		F86CF5631F88F0E400EFA735 /* VirtualObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86CF5621F88F0E400EFA735 /* VirtualObject.swift */; };
+		F86CF5661F88F19A00EFA735 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86CF5651F88F19A00EFA735 /* File.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,7 +36,16 @@
 		F86CF5381F88B9A800EFA735 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F86CF53A1F88B9A800EFA735 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F86CF54B1F88BEF800EFA735 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "Singapore App Challenge/Storyboard/Base.lproj/measurements.storyboard"; sourceTree = "<group>"; };
-		F86CF54F1F88C08F00EFA735 /* data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = data.swift; sourceTree = "<group>"; };
+		F86CF54F1F88C08F00EFA735 /* stuff.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = stuff.swift; sourceTree = "<group>"; };
+		F86CF5511F88C82A00EFA735 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
+		F86CF5531F88CDC100EFA735 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
+		F86CF5551F88CDD600EFA735 /* HistoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryCell.swift; sourceTree = "<group>"; };
+		F86CF5571F88D25200EFA735 /* ChooseObjectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseObjectViewController.swift; sourceTree = "<group>"; };
+		F86CF5591F88E42C00EFA735 /* SceneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneViewController.swift; sourceTree = "<group>"; };
+		F86CF55D1F88E5B900EFA735 /* FocusSquare.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusSquare.swift; sourceTree = "<group>"; };
+		F86CF5601F88E75400EFA735 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		F86CF5621F88F0E400EFA735 /* VirtualObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VirtualObject.swift; sourceTree = "<group>"; };
+		F86CF5651F88F19A00EFA735 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,7 +103,13 @@
 		F86CF5461F88BE1000EFA735 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				F86CF55B1F88E54A00EFA735 /* AR */,
+				F86CF5591F88E42C00EFA735 /* SceneViewController.swift */,
 				F86CF5301F88B9A800EFA735 /* ViewController.swift */,
+				F86CF5511F88C82A00EFA735 /* StartViewController.swift */,
+				F86CF5531F88CDC100EFA735 /* HistoryViewController.swift */,
+				F86CF5551F88CDD600EFA735 /* HistoryCell.swift */,
+				F86CF5571F88D25200EFA735 /* ChooseObjectViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -93,7 +117,7 @@
 		F86CF5481F88BE1F00EFA735 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				F86CF54F1F88C08F00EFA735 /* data.swift */,
+				F86CF54F1F88C08F00EFA735 /* stuff.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -103,6 +127,41 @@
 			children = (
 			);
 			path = Helper;
+			sourceTree = "<group>";
+		};
+		F86CF55B1F88E54A00EFA735 /* AR */ = {
+			isa = PBXGroup;
+			children = (
+				F86CF5641F88F18700EFA735 /* Gestures */,
+				F86CF55F1F88E73F00EFA735 /* Utilities */,
+				F86CF55C1F88E58300EFA735 /* Focus Square */,
+				F86CF5621F88F0E400EFA735 /* VirtualObject.swift */,
+			);
+			path = AR;
+			sourceTree = "<group>";
+		};
+		F86CF55C1F88E58300EFA735 /* Focus Square */ = {
+			isa = PBXGroup;
+			children = (
+				F86CF55D1F88E5B900EFA735 /* FocusSquare.swift */,
+			);
+			path = "Focus Square";
+			sourceTree = "<group>";
+		};
+		F86CF55F1F88E73F00EFA735 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				F86CF5601F88E75400EFA735 /* Utilities.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		F86CF5641F88F18700EFA735 /* Gestures */ = {
+			isa = PBXGroup;
+			children = (
+				F86CF5651F88F19A00EFA735 /* File.swift */,
+			);
+			path = Gestures;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -179,8 +238,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F86CF5561F88CDD600EFA735 /* HistoryCell.swift in Sources */,
+				F86CF5661F88F19A00EFA735 /* File.swift in Sources */,
+				F86CF55A1F88E42C00EFA735 /* SceneViewController.swift in Sources */,
 				F86CF5311F88B9A800EFA735 /* ViewController.swift in Sources */,
-				F86CF5501F88C08F00EFA735 /* data.swift in Sources */,
+				F86CF5521F88C82A00EFA735 /* StartViewController.swift in Sources */,
+				F86CF55E1F88E5B900EFA735 /* FocusSquare.swift in Sources */,
+				F86CF5631F88F0E400EFA735 /* VirtualObject.swift in Sources */,
+				F86CF5501F88C08F00EFA735 /* stuff.swift in Sources */,
+				F86CF5541F88CDC100EFA735 /* HistoryViewController.swift in Sources */,
+				F86CF5581F88D25200EFA735 /* ChooseObjectViewController.swift in Sources */,
+				F86CF5611F88E75400EFA735 /* Utilities.swift in Sources */,
 				F86CF52D1F88B9A800EFA735 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
