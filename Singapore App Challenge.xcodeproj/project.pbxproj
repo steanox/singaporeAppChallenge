@@ -42,7 +42,6 @@
 		F86CF5201F88B9A700EFA735 = {
 			isa = PBXGroup;
 			children = (
-				F86CF54A1F88BEF800EFA735 /* measurements.storyboard */,
 				F86CF52B1F88B9A700EFA735 /* Singapore App Challenge */,
 				F86CF52A1F88B9A700EFA735 /* Products */,
 			);
@@ -76,6 +75,7 @@
 			isa = PBXGroup;
 			children = (
 				F86CF5371F88B9A800EFA735 /* LaunchScreen.storyboard */,
+				F86CF54A1F88BEF800EFA735 /* measurements.storyboard */,
 				F86CF5321F88B9A800EFA735 /* Main.storyboard */,
 			);
 			path = Storyboard;
