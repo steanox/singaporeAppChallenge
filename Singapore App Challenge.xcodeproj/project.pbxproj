@@ -13,7 +13,7 @@
 		F86CF5341F88B9A800EFA735 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F86CF5321F88B9A800EFA735 /* Main.storyboard */; };
 		F86CF5361F88B9A800EFA735 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F86CF5351F88B9A800EFA735 /* Assets.xcassets */; };
 		F86CF5391F88B9A800EFA735 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F86CF5371F88B9A800EFA735 /* LaunchScreen.storyboard */; };
-		F86CF5421F88BC0A00EFA735 /* measurements.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F86CF5401F88BC0A00EFA735 /* measurements.storyboard */; };
+		F86CF5441F88BDC700EFA735 /* measurement.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F86CF5431F88BDC700EFA735 /* measurement.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,7 +25,7 @@
 		F86CF5351F88B9A800EFA735 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F86CF5381F88B9A800EFA735 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F86CF53A1F88B9A800EFA735 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F86CF5411F88BC0A00EFA735 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "Singapore App Challenge/Base.lproj/measurements.storyboard"; sourceTree = "<group>"; };
+		F86CF5431F88BDC700EFA735 /* measurement.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = measurement.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,16 +58,48 @@
 		F86CF52B1F88B9A700EFA735 /* Singapore App Challenge */ = {
 			isa = PBXGroup;
 			children = (
-				F86CF5401F88BC0A00EFA735 /* measurements.storyboard */,
+				F86CF5491F88BE3B00EFA735 /* Helper */,
 				F86CF52C1F88B9A800EFA735 /* AppDelegate.swift */,
+				F86CF5461F88BE1000EFA735 /* Controller */,
+				F86CF5451F88BE0100EFA735 /* Storyboard */,
+				F86CF5481F88BE1F00EFA735 /* Model */,
 				F86CF52E1F88B9A800EFA735 /* art.scnassets */,
 				F86CF5301F88B9A800EFA735 /* ViewController.swift */,
-				F86CF5321F88B9A800EFA735 /* Main.storyboard */,
 				F86CF5351F88B9A800EFA735 /* Assets.xcassets */,
-				F86CF5371F88B9A800EFA735 /* LaunchScreen.storyboard */,
 				F86CF53A1F88B9A800EFA735 /* Info.plist */,
 			);
 			path = "Singapore App Challenge";
+			sourceTree = "<group>";
+		};
+		F86CF5451F88BE0100EFA735 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				F86CF5431F88BDC700EFA735 /* measurement.storyboard */,
+				F86CF5371F88B9A800EFA735 /* LaunchScreen.storyboard */,
+				F86CF5321F88B9A800EFA735 /* Main.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		F86CF5461F88BE1000EFA735 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F86CF5481F88BE1F00EFA735 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F86CF5491F88BE3B00EFA735 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -129,9 +161,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F86CF5441F88BDC700EFA735 /* measurement.storyboard in Resources */,
 				F86CF52F1F88B9A800EFA735 /* art.scnassets in Resources */,
 				F86CF5391F88B9A800EFA735 /* LaunchScreen.storyboard in Resources */,
-				F86CF5421F88BC0A00EFA735 /* measurements.storyboard in Resources */,
 				F86CF5361F88B9A800EFA735 /* Assets.xcassets in Resources */,
 				F86CF5341F88B9A800EFA735 /* Main.storyboard in Resources */,
 			);
@@ -166,14 +198,6 @@
 				F86CF5381F88B9A800EFA735 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-		F86CF5401F88BC0A00EFA735 /* measurements.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F86CF5411F88BC0A00EFA735 /* Base */,
-			);
-			name = measurements.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
