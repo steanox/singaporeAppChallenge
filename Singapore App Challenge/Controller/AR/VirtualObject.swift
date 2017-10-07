@@ -9,15 +9,40 @@ import Foundation
 import SceneKit
 import ARKit
 
+extension VirtualObject {
+    
+    static func isNodePartOfVirtualObject(_ node: SCNNode) -> VirtualObject? {
+        if let virtualObjectRoot = node as? VirtualObject {
+            return virtualObjectRoot
+        }
+        
+        if node.parent != nil {
+            return isNodePartOfVirtualObject(node.parent!)
+        }
+        
+        return nil
+    }
+    
+}
 
 
 class VirtualObjectManager {
+    
+    
+    func setNewHeight(newHeight: CGFloat) {
+        if (newHeight > 0) {
+            for pointNode in self.pointNodes {
+                pointNode.setNewHeight(newHeight: newHeight)
+            }
+        }
+    }
     
     weak var delegate: VirtualObjectManagerDelegate?
     
     var virtualObjects = [VirtualObject]()
     
     var lastUsedObject: VirtualObject?
+    var pointNodes = [PointNode]()
     
     /// The queue with updates to the virtual objects are made on.
     var updateQueue: DispatchQueue
@@ -40,6 +65,30 @@ class VirtualObjectManager {
             fatalError("Unable to decode VirtualObjects JSON: \(error)")
         }
     }()
+    
+    func pointNodeExistAt(pos: float3) -> Bool {
+        
+        if (pointNodes.count == 0) {
+            return false
+        }
+        
+        let (v1, v2) = pointNodes[0].getChildBoundingBox()
+        
+        let nodeLengthInWorld = (
+            pointNodes[0].convertPosition(
+                SCNVector3(v1.x - v2.x, 0, v1.z - v2.z), to: pointNodes[0].parent)
+                - pointNodes[0].convertPosition( SCNVector3(0, 0, 0), to: pointNodes[0].parent)
+            ).length()
+        
+        for point in pointNodes {
+            let distance = (point.simdPosition - pos).length()
+            if (distance < (nodeLengthInWorld / 2.0)){
+                return true
+            }
+        }
+        
+        return false
+    }
     
     func removeAllVirtualObjects() {
         for object in virtualObjects {
@@ -72,25 +121,14 @@ class VirtualObjectManager {
         }
     }
     
-    // MARK: - Loading object
-    
-    func loadVirtualObject(_ object: VirtualObject, to position: float3, cameraTransform: matrix_float4x4) {
-        self.virtualObjects.append(object)
+    func loadVirtualObject(_ object: PointNode, to position: float3) {
+        self.pointNodes.append(object)
         self.delegate?.virtualObjectManager(self, willLoad: object)
-        
-        // Load the content asynchronously.
-        DispatchQueue.global(qos: .userInitiated).async {
-            object.load()
-            
-            // Immediately place the object in 3D space.
-            self.updateQueue.async {
-                self.setNewVirtualObjectPosition(object, to: position, cameraTransform: cameraTransform)
-                self.lastUsedObject = object
-                
-                self.delegate?.virtualObjectManager(self, didLoad: object)
-            }
-        }
+        object.simdPosition = position
     }
+    
+    // MARK: - Loading object
+ 
     
     // MARK: - React to gestures
     
@@ -352,7 +390,8 @@ class VirtualObjectManager {
 // MARK: - Delegate
 
 protocol VirtualObjectManagerDelegate: class {
-    func virtualObjectManager(_ manager: VirtualObjectManager, willLoad object: VirtualObject)
+    //func virtualObjectManager(_ manager: VirtualObjectManager, willLoad object: PointNode)
+    func virtualObjectManager(_ manager: VirtualObjectManager, willLoad object: PointNode)
     func virtualObjectManager(_ manager: VirtualObjectManager, didLoad object: VirtualObject)
     func virtualObjectManager(_ manager: VirtualObjectManager, transformDidChangeFor object: VirtualObject)
     func virtualObjectManager(_ manager: VirtualObjectManager, didMoveObjectOntoNearbyPlane object: VirtualObject)
@@ -412,21 +451,7 @@ class VirtualObject: SCNReferenceNode, ReactsToScale {
     }
 }
 
-extension VirtualObject {
-    
-    static func isNodePartOfVirtualObject(_ node: SCNNode) -> VirtualObject? {
-        if let virtualObjectRoot = node as? VirtualObject {
-            return virtualObjectRoot
-        }
-        
-        if node.parent != nil {
-            return isNodePartOfVirtualObject(node.parent!)
-        }
-        
-        return nil
-    }
-    
-}
+
 
 // MARK: - Protocols for Virtual Objects
 
@@ -447,5 +472,21 @@ extension SCNNode {
         
         return nil
     }
+}
+
+extension SCNVector3 {
+    
+    func length() -> Float {
+        return sqrtf(x * x + y * y + z * z)
+    }
+    
+    static func + (left: SCNVector3, right: SCNVector3) -> SCNVector3 {
+        return SCNVector3Make(left.x + right.x, left.y + right.y, left.z + right.z)
+    }
+    
+    static func - (left: SCNVector3, right: SCNVector3) -> SCNVector3 {
+        return SCNVector3Make(left.x - right.x, left.y - right.y, left.z - right.z)
+    }
+    
 }
 

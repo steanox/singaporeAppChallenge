@@ -35,9 +35,20 @@ class ChooseObjectViewController: UIViewController {
     }
 
     @IBAction func back(sender: UIButton){
-        previous?.imageCircle.transform = CGAffineTransform.identity
+
+        UIView.animate(withDuration: 0.3,delay: 1, animations: { [weak self] in
+            self?.previous?.imageCircle.transform = CGAffineTransform.identity
+            self?.previous?.cameraButton.transform = CGAffineTransform.identity
+        })
+        
         dismiss(animated: true, completion: nil)
+        
+
+
     }
     
+    @IBAction func openCamera(sender: UIButton){
+        performSegue(withIdentifier: "openCameraSegue", sender: nil)
+    }
 
 }

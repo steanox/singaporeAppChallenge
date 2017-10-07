@@ -24,6 +24,8 @@
 		F86CF5611F88E75400EFA735 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86CF5601F88E75400EFA735 /* Utilities.swift */; };
 		F86CF5631F88F0E400EFA735 /* VirtualObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86CF5621F88F0E400EFA735 /* VirtualObject.swift */; };
 		F86CF5661F88F19A00EFA735 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86CF5651F88F19A00EFA735 /* File.swift */; };
+		F8C208581F88FD340035B541 /* pointnode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C208571F88FD340035B541 /* pointnode.swift */; };
+		F8C2085A1F892D5A0035B541 /* MeasureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C208591F892D5A0035B541 /* MeasureViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +48,8 @@
 		F86CF5601F88E75400EFA735 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		F86CF5621F88F0E400EFA735 /* VirtualObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VirtualObject.swift; sourceTree = "<group>"; };
 		F86CF5651F88F19A00EFA735 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
+		F8C208571F88FD340035B541 /* pointnode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pointnode.swift; sourceTree = "<group>"; };
+		F8C208591F892D5A0035B541 /* MeasureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasureViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +114,7 @@
 				F86CF5531F88CDC100EFA735 /* HistoryViewController.swift */,
 				F86CF5551F88CDD600EFA735 /* HistoryCell.swift */,
 				F86CF5571F88D25200EFA735 /* ChooseObjectViewController.swift */,
+				F8C208591F892D5A0035B541 /* MeasureViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -136,6 +141,7 @@
 				F86CF55F1F88E73F00EFA735 /* Utilities */,
 				F86CF55C1F88E58300EFA735 /* Focus Square */,
 				F86CF5621F88F0E400EFA735 /* VirtualObject.swift */,
+				F8C208571F88FD340035B541 /* pointnode.swift */,
 			);
 			path = AR;
 			sourceTree = "<group>";
@@ -245,7 +251,9 @@
 				F86CF5521F88C82A00EFA735 /* StartViewController.swift in Sources */,
 				F86CF55E1F88E5B900EFA735 /* FocusSquare.swift in Sources */,
 				F86CF5631F88F0E400EFA735 /* VirtualObject.swift in Sources */,
+				F8C2085A1F892D5A0035B541 /* MeasureViewController.swift in Sources */,
 				F86CF5501F88C08F00EFA735 /* stuff.swift in Sources */,
+				F8C208581F88FD340035B541 /* pointnode.swift in Sources */,
 				F86CF5541F88CDC100EFA735 /* HistoryViewController.swift in Sources */,
 				F86CF5581F88D25200EFA735 /* ChooseObjectViewController.swift in Sources */,
 				F86CF5611F88E75400EFA735 /* Utilities.swift in Sources */,
