@@ -14,6 +14,7 @@
 		F86CF5361F88B9A800EFA735 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F86CF5351F88B9A800EFA735 /* Assets.xcassets */; };
 		F86CF5391F88B9A800EFA735 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F86CF5371F88B9A800EFA735 /* LaunchScreen.storyboard */; };
 		F86CF54C1F88BEF800EFA735 /* measurements.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F86CF54A1F88BEF800EFA735 /* measurements.storyboard */; };
+		F86CF5501F88C08F00EFA735 /* data.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86CF54F1F88C08F00EFA735 /* data.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		F86CF5381F88B9A800EFA735 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F86CF53A1F88B9A800EFA735 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F86CF54B1F88BEF800EFA735 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "Singapore App Challenge/Storyboard/Base.lproj/measurements.storyboard"; sourceTree = "<group>"; };
+		F86CF54F1F88C08F00EFA735 /* data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = data.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,7 +66,6 @@
 				F86CF5451F88BE0100EFA735 /* Storyboard */,
 				F86CF5481F88BE1F00EFA735 /* Model */,
 				F86CF52E1F88B9A800EFA735 /* art.scnassets */,
-				F86CF5301F88B9A800EFA735 /* ViewController.swift */,
 				F86CF5351F88B9A800EFA735 /* Assets.xcassets */,
 				F86CF53A1F88B9A800EFA735 /* Info.plist */,
 			);
@@ -84,6 +85,7 @@
 		F86CF5461F88BE1000EFA735 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				F86CF5301F88B9A800EFA735 /* ViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -91,6 +93,7 @@
 		F86CF5481F88BE1F00EFA735 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				F86CF54F1F88C08F00EFA735 /* data.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -177,6 +180,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F86CF5311F88B9A800EFA735 /* ViewController.swift in Sources */,
+				F86CF5501F88C08F00EFA735 /* data.swift in Sources */,
 				F86CF52D1F88B9A800EFA735 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
